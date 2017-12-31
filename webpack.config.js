@@ -7,7 +7,7 @@ module.exports = {
     './src/index.jsx',
   ],
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
