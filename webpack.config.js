@@ -13,6 +13,11 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'react-hot-loader/webpack!babel-loader',
       },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loaders: ['babel-loader', 'eslint-loader'],
+      },
     ],
   },
   resolve: {
