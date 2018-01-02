@@ -8,15 +8,16 @@ module.exports = {
   ],
   module: {
     rules: [
+      // {
+      //   enforce: 'pre',
+      //   test: /\.(js|jsx)$/,
+      //   exclude: /node_modules/,
+      //   loader: 'eslint-loader',
+      // },
       {
         test: /\.(js|jsx)?$/,
         exclude: /node_modules/,
         loader: 'react-hot-loader/webpack!babel-loader',
-      },
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        loaders: ['babel-loader', 'eslint-loader'],
       },
     ],
   },
