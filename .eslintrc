@@ -8,6 +8,8 @@
     "mocha": true
   },
   "globals": {
-    "expect": false
+    "expect": false,
+    "shallow": false,
+    "React": false
   }
 }

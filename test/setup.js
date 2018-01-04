@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
 import { JSDOM } from 'jsdom';
-import Enzyme from 'enzyme';
+import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -20,3 +20,4 @@ Object.keys(window).forEach((key) => {
 
 global.React = React;
 global.expect = expect;
+global.shallow = shallow;
