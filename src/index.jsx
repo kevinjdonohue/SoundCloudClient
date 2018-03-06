@@ -11,6 +11,10 @@ const tracks = [
     id: 2,
     title: 'Some other track',
   },
+  {
+    id: 3,
+    title: 'Hot New Track',
+  },
 ];
 
 ReactDOM.render(<Stream tracks={tracks} />, document.getElementById('app'));

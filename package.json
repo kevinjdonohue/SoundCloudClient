@@ -4,32 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --colors --hot --config ./webpack.config.js --mode development",
-    "test": "mocha --require babel-core/register --color --require ./test/setup.js ./src/**/*{test,spec}.{js,jsx}",
+    "start":
+      "webpack-dev-server --progress --colors --hot --config ./webpack.config.js --mode development",
+    "test":
+      "mocha --require babel-core/register --color --require ./test/setup.js ./src/**/*{test,spec}.{js,jsx}",
     "test:watch": "npm run test -- --watch --watch-extensions js,jsx",
-    "lint": "./node_modules/.bin/esw --color --format simple-detail 'src/**/*.{js,jsx}' 'test/**/*.{js,jsx}' '*.{js,jsx}'",
+    "lint":
+      "./node_modules/.bin/esw --color --format simple-detail 'src/**/*.{js,jsx}' 'test/**/*.{js,jsx}' '*.{js,jsx}'",
     "lint:watch": "npm run lint -- --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "babel": {
-    "presets": [
-      "react",
-      "stage-2",
-      [
-        "env",
-        {
-          "targets": {
-            "browsers": [
-              "last 2 versions"
-            ]
-          },
-          "debug": false
-        }
-      ]
-    ]
-  },
   "dependencies": {
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
