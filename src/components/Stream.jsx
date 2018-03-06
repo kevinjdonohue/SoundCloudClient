@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Stream({ tracks = [] }) {
+export default function Stream({ tracks }) {
   return (
     <div>
       {tracks.map(track => (
