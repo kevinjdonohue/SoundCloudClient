@@ -1,7 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-export default function Stream({ tracks }) {
+function Stream({ tracks }) {
   return (
     <div>
       {tracks.map(track => (
@@ -13,7 +14,20 @@ export default function Stream({ tracks }) {
   );
 }
 
+function mapStateToProps(state) {
+  const tracks = state.track;
+
+  return {
+    tracks,
+  };
+}
+
 Stream.propTypes = {
-  tracks: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.number, track: PropTypes.string }))
-    .isRequired,
+  tracks: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.number, track: PropTypes.string })),
 };
+
+Stream.defaultProps = {
+  tracks: [],
+};
+
+export default connect(mapStateToProps)(Stream);

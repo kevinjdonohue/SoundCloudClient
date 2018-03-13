@@ -1,3 +1,3 @@
-const TRACKS_SET = 'TRACKS_SET';
+/* eslint-disable import/prefer-default-export */
 
-export default TRACKS_SET;
+export const TRACKS_SET = 'TRACKS_SET';
