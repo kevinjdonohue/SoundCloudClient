@@ -8,7 +8,9 @@
     "test": "mocha --require babel-core/register --color --require ./test/setup.js ./src/**/*{test,spec}.{js,jsx}",
     "test:watch": "npm run test -- --watch --watch-extensions js,jsx",
     "lint": "./node_modules/.bin/esw --color --format simple-detail 'src/**/*.{js,jsx}' 'test/**/*.{js,jsx}' '*.{js,jsx}'",
-    "lint:watch": "npm run lint -- --watch"
+    "lint:watch": "npm run lint -- --watch",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +21,8 @@
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -44,5 +47,6 @@
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.11",
     "webpack-dev-server": "^3.1.1"
-  }
+  },
+  "snyk": true
 }
